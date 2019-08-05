@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 2px solid black;
+  padding: 17px;
+  border-spacing: 1px;
+  text-align: left;
+  vertical-align: top
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align: center;">các bài viết trên FAMILUG.ORG</h1>
+
+<table style="width:100%">
+  <thead>
+    <tr>
+      <th><h2>Pythons</h2></th>
+      <th><h2>Commands</h2></th>
+      <th><h2>Sysadmin</h2></th>
+      <th><h2>Latest</h2></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {% for titles, link, label in python %}
+        <li><span style="font-size: 20px"><a href="{{link}}">{{titles}}</a></span></li>
+        {% endfor %}
+      </td>
+      <td>
+        {% for titles, link, label in command %}
+        <li><span style="font-size: 20px"><a href="{{link}}">{{titles}}</a></span></li>
+        {% endfor %}
+      </td>
+      <td>
+        {% for titles, link, label in sysadmin %}
+        <li><span style="font-size: 20px"><a href="{{link}}">{{titles}}</a></span></li>
+        {% endfor %}
+      </td>
+      <td>
+        {% for titles, link, label in lastest %}
+        <li><span style="font-size: 20px"><a href="{{link}}">{{titles}}</a></span></li>
+        {% endfor %}
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</body>
